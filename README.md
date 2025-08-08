@@ -40,8 +40,7 @@ int main() {
   return 0;
 }
 EOF
-
----
+```
 
 ### 3. Executar o script
 O script irá:
@@ -58,6 +57,6 @@ O script irá:
 
 6. Listar e salvar as claims:
 
-**saida.txt (texto puro)**
+  - `saida.txt` (texto puro)
 
-**dados.csv (tabela com Claim, Linha e Expressão)**
+  - `dados.csv` (tabela com Claim, Linha e Expressão)
