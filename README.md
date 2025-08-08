@@ -45,18 +45,41 @@ EOF
 ### 3. Executar o script
 O script irá:
 
-1. Limpar arquivos e pastas antigos.
+  1. Limpar arquivos e pastas antigos.
 
-2. Localizar o primeiro .c e renomear para main.c.
+  2. Localizar o primeiro .c e renomear para main.c.
 
-3. Baixar e extrair a versão pré-compilada do ESBMC.
+  3. Baixar e extrair a versão pré-compilada do ESBMC.
 
-4. Conceder permissão de execução ao binário.
+  4. Conceder permissão de execução ao binário.
 
-5. Executar a verificação no main.c.
+  5. Executar a verificação no main.c.
 
-6. Listar e salvar as claims:
+  6. Listar e salvar as claims:
 
-  - `saida.txt` (texto puro)
+    - `saida.txt` (texto puro)
 
-  - `dados.csv` (tabela com Claim, Linha e Expressão)
+    - `dados.csv` (tabela com Claim, Linha e Expressão)
+
+
+### 4. Interpretar a saída
+  - VERIFICATION SUCCESSFUL → Nenhuma violação encontrada.
+
+  - VERIFICATION FAILED → Foi encontrada uma violação (ex.: `assert` falso).
+
+O script exibirá um DataFrame com as claims e salvará os arquivos de saída em `/content`.
+
+
+### 5. Rodar comandos extras (opcional)
+Mostrar contraexemplo (trace)
+```bash
+COLOCAR AQUI ALGUNS PARAMETROS QUE PODEM SER UTILIZADOS
+```
+
+### 6. Estrutura de Saída
+```bash
+/content/main.c       → Arquivo processado
+/content/esbmc-linux  → ESBMC extraído
+/content/saida.txt    → Claims em texto puro
+/content/dados.csv    → Claims em formato de tabela
+```
